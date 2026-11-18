@@ -1,0 +1,74 @@
+body {
+            background-color: #f1f5f9;
+            margin: 0;
+        }
+
+.menu-lateral {
+    width: 250px;
+    height: 100vh;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #172554;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 25px 15px;
+    color: white;
+}
+
+.menu-lateral h4 {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.menu-lateral .subtitulo {
+    text-align: center;
+    font-size: 13px;
+    color: #94a3b8;
+    margin-bottom: 40px;
+}
+
+.menu-lateral .menu-titulo {
+    font-size: 11px;
+    color: #94a3b8;
+    font-weight: bold;
+    margin: 25px 10px 10px;
+}
+
+.menu-lateral a {
+    display: block;
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    transition: 0.2s;
+}
+
+.menu-lateral a:hover,
+.menu-lateral a.active {
+    background-color: #2563eb;
+    color: white;
+}
+
+.menu-lateral i {
+    margin-right: 10px;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 30px;
+}
+
+.content-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    min-height: 400px;
+}
+
+.PRODUTO{
+    background-color: #172554;
+    color: yellowgreen;
+}

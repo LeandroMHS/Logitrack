@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "nome": "Monitor LG ultragear",
+        "descricao": "Monitor da marca LG de 27'' IPS LCD de 144Htz",
+        "quantidade": 50
+    },
+    {
+        "id": 2,
+        "nome": "Memória RAM fury 2x8gb",
+        "descricao": "Memória RAM fury DDR4 3200\r\n2x8gb totalizando 16gb",
+        "quantidade": 50
+    },
+    {
+        "id": 3,
+        "nome": "amendoims",
+        "descricao": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "quantidade": 5
+    },
+    {
+        "id": 4,
+        "nome": "banana",
+        "descricao": "amarela e docinha igual mel, vendida por cacho UIUIUI papai cuida",
+        "quantidade": 20
+    }
+]
