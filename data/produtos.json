@@ -14,13 +14,19 @@
     {
         "id": 3,
         "nome": "amendoims",
-        "descricao": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "descricao": "amndoim bonzão",
         "quantidade": 5
     },
     {
         "id": 4,
-        "nome": "banana",
+        "nome": "bananinha",
         "descricao": "amarela e docinha igual mel, vendida por cacho UIUIUI papai cuida",
         "quantidade": 20
+    },
+    {
+        "id": 5,
+        "nome": "AAAAAAAAAAi",
+        "descricao": "aaaassasasa",
+        "quantidade": 3
     }
 ]

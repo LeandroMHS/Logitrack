@@ -41,11 +41,11 @@
             <div class="row g-3">
 
                 <div class="col-md-6">
-                    <label for="nome" class="form-label fw-semibold">Nome do produto</label>
+                    <label for="nomeProduto" class="form-label fw-semibold">Nome do produto</label>
                     <input
                         type="text"
                         class="form-control"
-                        id="nome"
+                        id="nomeProduto"
                         name="nome"
                         placeholder="Ex: Notebook"
                         required
@@ -53,11 +53,11 @@
                 </div>
 
                 <div class="col-md-6">
-                    <label for="quantidade" class="form-label fw-semibold">Quantidade disponível</label>
+                    <label for="quantidadeProduto" class="form-label fw-semibold">Quantidade disponível</label>
                     <input
                         type="number"
                         class="form-control"
-                        id="quantidade"
+                        id="quantidadeProduto"
                         name="quantidade"
                         placeholder="Ex: 50"
                         min="0"
@@ -66,10 +66,10 @@
                 </div>
 
                 <div class="col-12">
-                    <label for="descricao" class="form-label fw-semibold">Descrição</label>
+                    <label for="descricaoProduto" class="form-label fw-semibold">Descrição</label>
                     <textarea
                         class="form-control"
-                        id="descricao"
+                        id="descricaoProduto"
                         name="descricao"
                         rows="3"
                         placeholder="Descreva as características do produto..."
@@ -80,11 +80,11 @@
             </div>
 
             <div class="d-flex justify-content-end gap-2 mt-4">
-                <button type="reset" class="btn btn-light border" id="btnCancelar">
+                <button type="reset" class="btn btn-light border" id="btnCancelarProduto">
                     Cancelar
                 </button>
 
-                <button type="submit" class="btn btn-primary" id="btnSalvar">
+                <button type="submit" class="btn btn-primary" id="btnSalvarProduto">
                     <i class="bi bi-check-lg me-2"></i>Salvar produto
                 </button>
             </div>
@@ -138,14 +138,15 @@
                                 <td class="text-center">
                                     <button
                                         type="button"
-                                        class="btn btn-sm btn-outline-primary btnEditar"
+                                        class="btn btn-sm btn-outline-primary btnEditarProduto"
 
                                         data-id="<?= htmlspecialchars($produto['id']) ?>"
                                         data-nome="<?= htmlspecialchars($produto['nome'], ENT_QUOTES, 'UTF-8') ?>"
                                         data-descricao="<?= htmlspecialchars($produto['descricao'], ENT_QUOTES, 'UTF-8') ?>"
                                         data-quantidade="<?= htmlspecialchars($produto['quantidade']) ?>"
                                     >
-                                        <i class="bi bi-pencil-square">Editar</i>
+                                        <i class="bi bi-pencil-square"></i>
+                                        Editar
                                     </button>
                                 </td>
                             </tr>

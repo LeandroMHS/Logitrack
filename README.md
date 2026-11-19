@@ -20,7 +20,7 @@ Fretes: geração e consulta de fretes, relacionando produtos, endereços e tran
 
 Relatórios: geração de relatórios de fretes realizados em uma data selecionada.
 
-🛠️ Tecnologias utilizadas
+Tecnologias utilizadas:
 
 PHP
 
