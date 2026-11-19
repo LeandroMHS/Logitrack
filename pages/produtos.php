@@ -20,10 +20,6 @@
         <h2 class="fw-bold mb-1">Produtos</h2>
         <p class="text-muted mb-0">Cadastre e gerencie os produtos disponíveis para transporte.</p>
     </div>
-
-    <button class="btn btn-primary" type="button" id="btnNovoProduto">
-        <i class="bi bi-plus-lg me-2"></i>Novo produto
-    </button>
 </div>
 
 <!-- Formulário de cadastro e edição -->

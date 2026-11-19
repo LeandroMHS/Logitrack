@@ -2,31 +2,31 @@
     {
         "id": 1,
         "nome": "Monitor LG ultragear",
-        "descricao": "Monitor da marca LG de 27'' IPS LCD de 144Htz",
+        "descricao": "Monitor da marca LG brabo e ruim",
         "quantidade": 50
     },
     {
         "id": 2,
         "nome": "Memória RAM fury 2x8gb",
-        "descricao": "Memória RAM fury DDR4 3200\r\n2x8gb totalizando 16gb",
+        "descricao": "Memória RAM fury DDR1\r\n2x1 totalizando 2gb RAM",
         "quantidade": 50
     },
     {
         "id": 3,
-        "nome": "amendoims",
-        "descricao": "amndoim bonzão",
-        "quantidade": 5
+        "nome": "Mousepad HyperX",
+        "descricao": "medidas 1km X 1cm\r\ncor: preto escuro",
+        "quantidade": 70
     },
     {
         "id": 4,
-        "nome": "bananinha",
-        "descricao": "amarela e docinha igual mel, vendida por cacho UIUIUI papai cuida",
+        "nome": "Processador Ryzen 5 5500",
+        "descricao": "Processador da AMD topzão brabo",
         "quantidade": 20
     },
     {
         "id": 5,
-        "nome": "AAAAAAAAAAi",
-        "descricao": "aaaassasasa",
-        "quantidade": 3
+        "nome": "Placa de video RX 7600",
+        "descricao": "Uma placa... de video",
+        "quantidade": 30
     }
 ]

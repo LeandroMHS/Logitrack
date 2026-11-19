@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "cep": "111111111",
+        "rua": "Rudolfo rudolfino",
+        "numero": "69"
+    },
+    {
+        "id": 2,
+        "cep": "252511311",
+        "rua": "Rua dos andes andantes",
+        "numero": "87"
+    }
+]

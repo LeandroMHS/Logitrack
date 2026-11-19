@@ -47,9 +47,8 @@ function cancelarEdicaoProduto() {
         '<i class="bi bi-check-lg me-2"></i>Salvar produto';
 }
 
-//FUNÇÕES PARA EDIÇÃO DE TRANSPORTADORES
+//---------------------FUNÇÕES PARA EDIÇÃO DE TRANSPORTADORES---------------------
 function editarTransportador(botao){
-    alert("AAAAAAAAi")
 
     // Recupera os dados do produto
     const id = botao.dataset.id;
@@ -80,7 +79,7 @@ function editarTransportador(botao){
 
 function cancelarEdicaoTransportador(){
      // Limpa os campos do formulário
-    document.querySelector('#formulariTransportador form').reset();
+    document.querySelector('#formularioTransportador form').reset();
 
     // Limpa o ID do produto selecionado
     document.getElementById('idTransportador').value = '';
@@ -94,6 +93,37 @@ function cancelarEdicaoTransportador(){
     // Restaura o texto do botão
     document.getElementById('btnSalvarTransportador').innerHTML =
         '<i class="bi bi-check-lg me-2"></i>Salvar Transportador';
+}
+
+//---------------------FUNÇÕES PARA EDIÇÃO DE ENDEREÇOS---------------------//
+
+function editarEndereco(botao) {
+
+    // Recupera os dados do endereço
+    const id = botao.dataset.id;
+    const cep = botao.dataset.cep;
+    const rua = botao.dataset.rua;
+    const numero = botao.dataset.numero;
+
+    // Preenche os campos do formulário
+    document.getElementById('idEndereco').value = id;
+    document.getElementById('cepEndereco').value = cep;
+    document.getElementById('ruaEndereco').value = rua;
+    document.getElementById('numeroEndereco').value = numero;
+
+    // Altera a operação para edição
+    document.getElementById('acaoEndereco').value = 'editar';
+
+    // Atualiza os textos do formulário
+    document.getElementById('tituloFormulario').textContent = 'Editar endereço';
+
+    document.getElementById('btnSalvarEndereco').innerHTML =
+        '<i class="bi bi-check-lg me-2"></i>Atualizar endereço';
+
+    // Rola a página para o formulário
+    document.getElementById('formularioEndereco').scrollIntoView({
+        behavior: 'smooth'
+    });
 }
 
 // Botões de edição dos produtos
@@ -125,5 +155,23 @@ botoesEditartransportador.forEach(function(botao) {
 if (btnCancelarTransportador) {
     btnCancelarTransportador.addEventListener('click', function() {
         cancelarEdicaoTransportador();
+    });
+}
+
+// Botões de edição dos endereços
+const botoesEditarEndereco = document.querySelectorAll('.btnEditarEndereco');
+
+const btnCancelarEndereco = document.getElementById('btnCancelarEndereco');
+
+botoesEditarEndereco.forEach(function(botao) {
+    botao.addEventListener('click', function() {
+        editarEndereco(botao);
+    });
+});
+
+// Botão de cancelar edição
+if (btnCancelarEndereco) {
+    btnCancelarEndereco.addEventListener('click', function() {
+        cancelarEdicaoEndereco();
     });
 }

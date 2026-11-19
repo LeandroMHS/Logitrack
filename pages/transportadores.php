@@ -23,11 +23,6 @@
             Gerencie os transportadores cadastrados no sistema.
         </p>
     </div>
-
-    <button class="btn btn-primary" id="btnNovoTransportador">
-        <i class="bi bi-plus-lg me-2"></i>
-        Novo transportador
-    </button>
 </div>
 
 
