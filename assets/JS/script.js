@@ -96,6 +96,19 @@ function cancelarEdicaoTransportador(){
 }
 
 //---------------------FUNÇÕES PARA EDIÇÃO DE ENDEREÇOS---------------------//
+function abrirFormularioFrete() {
+
+    const formulario = document.getElementById('formularioFrete');
+
+    // Exibe o formulário
+    formulario.style.display = 'block';
+
+    // Rola a página até o formulário
+    formulario.scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+
 
 function editarEndereco(botao) {
 
@@ -175,3 +188,168 @@ if (btnCancelarEndereco) {
         cancelarEdicaoEndereco();
     });
 }
+
+//---------------------FUNÇÕES PARA GERAÇÃO DE FRETES---------------------//
+
+// Adiciona um novo produto ao formulário
+function adicionarProdutoFrete() {
+
+    const listaProdutos = document.getElementById('listaProdutosFrete');
+
+    // Recupera todas as linhas existentes
+    const produtos = listaProdutos.querySelectorAll('.itemProdutoFrete');
+
+    // Verifica se todas as linhas estão preenchidas
+    for (const produto of produtos) {
+
+        const select = produto.querySelector('select');
+        const quantidade = produto.querySelector('input');
+
+        if (select.value === '' || quantidade.value === '') {
+
+            alert('Preencha o produto e a quantidade antes de adicionar outro.');
+
+            return;
+        }
+    }
+
+    // Recupera a primeira linha como modelo
+    const primeiroProduto = listaProdutos.querySelector('.itemProdutoFrete');
+
+    // Cria uma cópia da linha
+    const novoProduto = primeiroProduto.cloneNode(true);
+
+    // Limpa os campos da nova linha
+    novoProduto.querySelector('select').selectedIndex = 0;
+    novoProduto.querySelector('input').value = '';
+
+    // Habilita o botão de remover
+    novoProduto.querySelector('.btnRemoverProdutoFrete').disabled = false;
+
+    // Adiciona a nova linha
+    listaProdutos.appendChild(novoProduto);
+
+    // Atualiza os índices dos campos
+    atualizarIndicesProdutos();
+}
+
+
+// Remove uma linha de produto
+function removerProdutoFrete(botao) {
+
+    const listaProdutos = document.getElementById('listaProdutosFrete');
+
+    // Recupera todas as linhas existentes
+    const produtos = listaProdutos.querySelectorAll('.itemProdutoFrete');
+
+    // Verifica se existe mais de uma linha
+    if (produtos.length > 1) {
+
+        // Identifica e remove a linha correspondente ao botão
+        botao.closest('.itemProdutoFrete').remove();
+
+        // Atualiza os índices dos campos
+        atualizarIndicesProdutos();
+    }
+}
+
+
+// Atualiza os índices dos produtos
+function atualizarIndicesProdutos() {
+
+    const produtos = document.querySelectorAll('.itemProdutoFrete');
+
+    produtos.forEach(function(produto, indice) {
+
+        // Atualiza o campo de seleção
+        produto.querySelector('select').name =
+            `produtos[${indice}][produto_id]`;
+
+        // Atualiza o campo de quantidade
+        produto.querySelector('input').name =
+            `produtos[${indice}][quantidade]`;
+
+        // Controla o botão de remover
+        const btnRemover = produto.querySelector('.btnRemoverProdutoFrete');
+
+        // Impede remover a última linha
+        btnRemover.disabled = produtos.length === 1;
+
+    });
+}
+
+// Cancela a geração do frete
+function cancelarFrete() {
+
+    const formulario = document.getElementById('formFrete');
+    const listaProdutos = document.getElementById('listaProdutosFrete');
+
+    // Limpa todos os campos do formulário
+    formulario.reset();
+
+    // Recupera todas as linhas de produtos
+    const produtos = listaProdutos.querySelectorAll('.itemProdutoFrete');
+
+    // Mantém somente a primeira linha
+    produtos.forEach(function(produto, indice) {
+
+        if (indice > 0) {
+            produto.remove();
+        }
+
+    });
+
+    // Limpa os campos da primeira linha
+    const primeiroProduto = listaProdutos.querySelector('.itemProdutoFrete');
+
+    primeiroProduto.querySelector('select').selectedIndex = 0;
+    primeiroProduto.querySelector('input').value = '';
+
+    // Atualiza os índices e os botões
+    atualizarIndicesProdutos();
+
+    // Oculta o formulário
+    document.getElementById('formularioFrete').style.display = 'none';
+}
+
+
+// Botão para adicionar produtos
+const btnAdicionarProdutoFrete = document.getElementById('btnAdicionarProdutoFrete');
+
+if (btnAdicionarProdutoFrete) {
+
+    btnAdicionarProdutoFrete.addEventListener('click', function() {
+        adicionarProdutoFrete();
+    });
+}
+
+// Botão para abrir o formulário
+const btnNovoFrete = document.getElementById('btnNovoFrete');
+
+if (btnNovoFrete) {
+    btnNovoFrete.addEventListener('click', function() {
+        abrirFormularioFrete();
+    });
+}
+
+// Botão para cancelar a geração do frete
+const btnCancelarFrete = document.getElementById('btnCancelarFrete');
+
+if (btnCancelarFrete) {
+
+    btnCancelarFrete.addEventListener('click', function() {
+        cancelarFrete();
+    });
+
+}
+
+// Botões para remover produtos
+document.addEventListener('click', function(event) {
+
+    const btnRemover = event.target.closest('.btnRemoverProdutoFrete');
+
+    if (btnRemover) {
+        removerProdutoFrete(btnRemover);
+    }
+
+});
