@@ -2,11 +2,11 @@ Sistema web desenvolvido para auxiliar no gerenciamento de produtos, endereços,
 
 SOBRE:
 
-O LogiTrack é um projeto acadêmico desenvolvido como parte das atividades do curso de Análise e Desenvolvimento de Sistemas (ADS) da UNIPAR.
+O LogiTrack é um projeto acadêmico desenvolvido para a Atividade Pratica Orientada(APO) do modulo 54 na matéria Fundamentos de Programação para Internet do curso de Análise e Desenvolvimento de Sistemas (ADS) da UNIPAR.
 
 O sistema tem como objetivo oferecer uma solução simples e organizada para o gerenciamento de operações logísticas, centralizando informações sobre produtos disponíveis, endereços de origem e destino, transportadores e fretes realizados.
 
-A aplicação utiliza arquivos JSON para armazenar os dados, dispensando a necessidade de um banco de dados externo.
+A aplicação utiliza arquivos JSON para armazenar os dados.
 
 Funcionalidades
 
@@ -18,7 +18,7 @@ Transportadores: cadastro, listagem e edição de transportadores.
 
 Fretes: geração e consulta de fretes, relacionando produtos, endereços e transportadores.
 
-Relatórios: geração de relatórios de fretes realizados em uma data selecionada.
+Relatórios: geração de relatórios de fretes realizados em uma data selecionada(no formato .CSV).
 
 Tecnologias utilizadas:
 

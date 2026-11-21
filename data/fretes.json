@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "transportador_id": 1,
+        "origem_id": 2,
+        "destino_id": 1,
+        "data": "2026-11-20",
+        "produtos": [
+            {
+                "produto_id": 3,
+                "quantidade": 4
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "transportador_id": 1,
+        "origem_id": 2,
+        "destino_id": 1,
+        "data": "2026-11-21",
+        "produtos": [
+            {
+                "produto_id": 5,
+                "quantidade": 1
+            },
+            {
+                "produto_id": 4,
+                "quantidade": 1
+            }
+        ]
+    }
+]
