@@ -3,19 +3,19 @@
         "id": 1,
         "nome": "Monitor LG ultragear",
         "descricao": "Monitor da marca LG brabo e ruim",
-        "quantidade": 50
+        "quantidade": 42
     },
     {
         "id": 2,
         "nome": "Memória RAM fury 2x8gb",
         "descricao": "Memória RAM fury DDR1\r\n2x1 totalizando 2gb RAM",
-        "quantidade": 50
+        "quantidade": 49
     },
     {
         "id": 3,
         "nome": "Mousepad HyperX",
         "descricao": "medidas 1km X 1cm\r\ncor: preto escuro",
-        "quantidade": 66
+        "quantidade": 65
     },
     {
         "id": 4,
@@ -27,6 +27,6 @@
         "id": 5,
         "nome": "Placa de video RX 7600",
         "descricao": "Uma placa... de video",
-        "quantidade": 29
+        "quantidade": 21
     }
 ]

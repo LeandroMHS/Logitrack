@@ -2,13 +2,13 @@
     {
         "id": 1,
         "transportador_id": 1,
-        "origem_id": 2,
-        "destino_id": 1,
-        "data": "2026-11-20",
+        "origem_id": 1,
+        "destino_id": 2,
+        "data": "2026-11-21",
         "produtos": [
             {
-                "produto_id": 3,
-                "quantidade": 4
+                "produto_id": 2,
+                "quantidade": 1
             }
         ]
     },
@@ -20,11 +20,7 @@
         "data": "2026-11-21",
         "produtos": [
             {
-                "produto_id": 5,
-                "quantidade": 1
-            },
-            {
-                "produto_id": 4,
+                "produto_id": 3,
                 "quantidade": 1
             }
         ]

@@ -279,22 +279,13 @@ if ($acao === 'cadastrar') {
 
     // Salva o novo frete
     if (!salvarJson($caminhoFretes, $fretes)) {
-
-        // Tenta restaurar o estoque original caso o frete não seja salvo
-        if ($conteudoOriginalProdutos !== false) {
-            file_put_contents(
-                $caminhoProdutos,
-                $conteudoOriginalProdutos,
-                LOCK_EX
-            );
-        }
-
+        
         redirecionar('erro_salvar');
     }
 
-
     // Finaliza o cadastro
     redirecionar('sucesso');
+
 
 }
 
