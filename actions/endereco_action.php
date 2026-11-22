@@ -109,4 +109,3 @@ if ($resultado === false) {
 redirecionar($status);
 
 ?>
-```
