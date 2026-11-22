@@ -16,17 +16,5 @@
         "nome": "Mousepad HyperX",
         "descricao": "medidas 1km X 1cm\r\ncor: preto escuro",
         "quantidade": 65
-    },
-    {
-        "id": 4,
-        "nome": "Processador Ryzen 5 5500",
-        "descricao": "Processador da AMD topzão brabo",
-        "quantidade": 19
-    },
-    {
-        "id": 5,
-        "nome": "Placa de video RX 7600",
-        "descricao": "Uma placa... de video",
-        "quantidade": 21
     }
 ]
