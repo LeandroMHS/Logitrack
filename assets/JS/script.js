@@ -96,47 +96,54 @@ function cancelarEdicaoTransportador(){
 }
 
 //---------------------FUNÇÕES PARA EDIÇÃO DE ENDEREÇOS---------------------//
-function abrirFormularioFrete() {
-
-    const formulario = document.getElementById('formularioFrete');
-
-    // Exibe o formulário
-    formulario.style.display = 'block';
-
-    // Rola a página até o formulário
-    formulario.scrollIntoView({
-        behavior: 'smooth'
-    });
-}
 
 
 function editarEndereco(botao) {
-
+    
     // Recupera os dados do endereço
     const id = botao.dataset.id;
     const cep = botao.dataset.cep;
     const rua = botao.dataset.rua;
     const numero = botao.dataset.numero;
-
+    
     // Preenche os campos do formulário
     document.getElementById('idEndereco').value = id;
     document.getElementById('cepEndereco').value = cep;
     document.getElementById('ruaEndereco').value = rua;
     document.getElementById('numeroEndereco').value = numero;
-
+    
     // Altera a operação para edição
     document.getElementById('acaoEndereco').value = 'editar';
-
+    
     // Atualiza os textos do formulário
     document.getElementById('tituloFormulario').textContent = 'Editar endereço';
-
+    
     document.getElementById('btnSalvarEndereco').innerHTML =
-        '<i class="bi bi-check-lg me-2"></i>Atualizar endereço';
-
+    '<i class="bi bi-check-lg me-2"></i>Atualizar endereço';
+    
     // Rola a página para o formulário
     document.getElementById('formularioEndereco').scrollIntoView({
         behavior: 'smooth'
     });
+}
+
+function cancelarEdicaoEndereco() {
+
+    // Limpa os campos do formulário
+    document.querySelector('#formularioEndereco form').reset();
+
+    // Limpa o ID do endereço selecionado
+    document.getElementById('idEndereco').value = '';
+
+    // Retorna a operação para cadastro
+    document.getElementById('acaoEndereco').value = 'cadastrar';
+
+    // Restaura o título
+    document.getElementById('tituloFormulario').textContent = 'Cadastrar endereço';
+
+    // Restaura o texto do botão
+    document.getElementById('btnSalvarEndereco').innerHTML =
+        '<i class="bi bi-check-lg me-2"></i>Salvar endereço';
 }
 
 // Botões de edição dos produtos
@@ -190,21 +197,33 @@ if (btnCancelarEndereco) {
 }
 
 //---------------------FUNÇÕES PARA GERAÇÃO DE FRETES---------------------//
+function abrirFormularioFrete() {
+
+    const formulario = document.getElementById('formularioFrete');
+
+    // Exibe o formulário
+    formulario.style.display = 'block';
+
+    // Rola a página até o formulário
+    formulario.scrollIntoView({
+        behavior: 'smooth'
+    });
+}
 
 // Adiciona um novo produto ao formulário
 function adicionarProdutoFrete() {
-
+    
     const listaProdutos = document.getElementById('listaProdutosFrete');
-
+    
     // Recupera todas as linhas existentes
     const produtos = listaProdutos.querySelectorAll('.itemProdutoFrete');
-
+    
     // Verifica se todas as linhas estão preenchidas
     for (const produto of produtos) {
-
+        
         const select = produto.querySelector('select');
         const quantidade = produto.querySelector('input');
-
+        
         if (select.value === '' || quantidade.value === '') {
 
             alert('Preencha o produto e a quantidade antes de adicionar outro.');
